@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Todo } from '@my-org/data';
 
-interface Todos {
-  title: string;
-}
 @Component({
   selector: 'my-org-root',
   templateUrl: './app.component.html',
@@ -12,7 +10,7 @@ interface Todos {
 export class AppComponent {
   title = 'todos';
 
-  todos: Todos[] = [];
+  todos: Todo[] = [];
 
   constructor(private http: HttpClient) {
     this.fetch();
@@ -20,7 +18,7 @@ export class AppComponent {
 
   fetch() {
     this.http
-      .get<Todos[]>('/api/todos')
+      .get<Todo[]>('/api/todos')
       .subscribe((t) => (this.todos = t));
   }
 
