@@ -13,7 +13,10 @@
         "main": "apps/todos/src/main.ts",
         "polyfills": "apps/todos/src/polyfills.ts",
         "tsConfig": "apps/todos/tsconfig.app.json",
-        "assets": ["apps/todos/src/favicon.ico", "apps/todos/src/assets"],
+        "assets": [
+          "apps/todos/src/favicon.ico",
+          "apps/todos/src/assets"
+        ],
         "styles": ["apps/todos/src/styles.css"],
         "scripts": []
       },
@@ -60,7 +63,10 @@
           "browserTarget": "todos:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/todos/proxy.conf.json"
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
