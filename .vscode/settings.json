@@ -2,8 +2,17 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.printWidth": 60,
   "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
   "prettier.requireConfig": true,
+  "editor.guides.bracketPairs": true,
+  "workbench.editor.highlightModifiedTabs": true,
   "java.configuration.updateBuildConfiguration": "automatic",
+  // use a font with font ligatures
+  "editor.fontFamily": "Jetbrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  // 4. enable font ligature
+  "editor.fontLigatures": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
